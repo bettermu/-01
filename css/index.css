@@ -1,0 +1,319 @@
+
+
+.clearfix::after {
+	display:block;
+	content:'';
+	height:0;
+	line-height:0;
+	clear:both;
+}
+
+body {
+	width:100%;
+	height:100%;
+	background:url('../img/bg.jpg') no-repeat fixed;
+	padding:0;
+	
+}
+
+
+.header h1 {
+	font-size:0.3125rem;
+	color:#b6e3fa;
+	text-align:center;
+	margin:0.1042rem 0 0 0;
+}
+.header .time {
+	font-weight: bold;
+	position:absolute;
+	font-size:0.1667rem; 
+	color:#b6e3fa;
+	margin-top:0.0833rem;
+	margin-left:0.3125rem;
+}
+.header .setTime {
+	position:absolute;
+	top:0.182292rem;
+	right:1.041667rem;
+	color:#fff;
+	font-size:0.1875rem;
+}
+
+.main {
+	width:9.6875rem;
+	margin:0 auto 0.260417rem;
+	box-sizing:border-box;
+}
+.main>div {
+	float:left;
+	margin-top:0.15625rem;
+}
+.main div span.title {
+	color:#b6e3fa;
+	font-size:0.1875rem;
+	font-weight: bold;
+	float:right;
+	margin-right:0.0781rem;
+	margin-top:0.026rem;
+}
+
+/* 交易额 */
+.main .deal {
+	float:left;
+	height:1.5625rem;
+	width:3.239583rem;
+	background:url('../img/deal.png') no-repeat;
+	background-size:3.239583rem 1.5625rem;
+}
+#deal {
+	width:3.239583rem;
+	height:1.5625rem;
+	padding-top:0.260417rem;
+	box-sizing:border-box;
+	font-size:0.15625rem;
+	color:#bcd3ff;
+}
+#deal li {
+	padding-left:0.078125rem;
+	padding-top:0.038125rem;
+}
+#deal span.money {
+	width:0.833333rem;
+	box-sizing:border-box;
+	margin-left:0.2865rem;
+	padding-right:0.026042rem;
+	position:relative;
+	top:0.041667rem;
+}
+#deal span.percent {
+	box-sizing:border-box;
+	width:0.3125rem;
+	margin-left:0.052083rem;
+	padding-right:0.026042rem;
+}
+#deal span.money,#deal span.percent {
+	border:1px solid #ffef9a;
+	color:#ffef9a;
+	height:0.21875rem;
+	line-height:0.21875rem;
+	display:inline-block;
+	font-size:0.135417rem;
+	text-align:right;
+	
+}
+#deal span.tip {
+	display:inline-block;
+	height:0.114583rem;
+	width:0.104167rem;
+	background:url('../img/icon-up.png') no-repeat;
+	background-size:0.104167rem 0.114583rem;
+	margin-left:0.052083rem;
+}
+#deal span.tip.desc {
+	background:url('../img/icon-down.png') no-repeat;
+	background-size:0.104167rem 0.114583rem;
+}
+/* 流水 */
+.main .water {
+	float:left;
+	margin-left:0.130208rem;
+	height:1.5625rem;
+	width:6.307292rem;
+	background:url('../img/water.png') no-repeat;
+	background-size:6.3073rem 1.5625rem ;
+}
+.main .water ul {
+	width:100%;
+	height:100%;
+	padding-top:0.260417rem;
+	box-sizing:border-box;
+	
+}
+.main .water ul li {
+	width:33.33%;
+	height:100%;
+	float:left;
+}
+
+/* 采购商 */
+.main .procurer {
+	float:left;
+	height:3.177083rem;
+	width:2.614583rem;
+	background:url('../img/procurer.png') no-repeat;
+	background-size:2.614583rem 3.177083rem;
+}
+.main .procurer #procurer {
+	height:100%;
+	width:100%;
+	padding-top:0.260417rem;
+	box-sizing:border-box;
+}
+/* 供应商 */
+.main .provider {
+	float:left;
+	margin-left:0.130208rem;
+	height:3.177083rem;
+	width:2.614583rem;
+	background:url('../img/provider.png') no-repeat;
+	background-size:2.614583rem 3.177083rem;
+}
+.main .provider #provider {
+	height:100%;
+	width:100%;
+	padding-top:0.260417rem;
+	box-sizing:border-box;
+}
+/* 景区热点 */
+.main .hot-spot {
+	margin-left:0.130208rem;
+	float:left;
+	height:3.177083rem;
+	width:4.177083rem;
+	background:url('../img/hot-spot.png') no-repeat;
+	background-size:4.177083rem 3.177083rem;
+}
+.main .hot-spot #hotSpot {
+	height:100%;
+	width:70%;
+	
+	box-sizing:border-box;
+	float:left;
+}
+.main .hot-spot .hotSpot-wrap {
+	width:100%;
+	height:100%;
+	padding-top:0.260417rem;
+	box-sizing:border-box;
+}
+.main .hot-spot .hotSpot-wrap .message {
+	width:30%;
+	height:100%;	
+	box-sizing:border-box;
+	float:right;
+	color:#bdd2ff;
+}
+.main .hot-spot .hotSpot-wrap .message h3 {
+	font-size:0.15625rem;
+	font-weight:normal;
+	padding-right:0.15625rem;
+	text-align:right;
+	margin-bottom:0;
+	float:right;
+	width:1.5625rem;
+}
+.main .hot-spot .hotSpot-wrap .message ul {
+	
+	font-size:0.135417rem;
+	padding-right:0.15625rem;
+	text-align:right;
+	float:right;
+}
+.main .hot-spot .hotSpot-wrap .message ul li {
+	margin-top:0.104167rem;
+}
+.main .hot-spot .hotSpot-wrap .message ul li span.num {
+	color:#fff09d;
+	margin-right:0.052083rem;
+}
+.main .hot-spot .hotSpot-wrap .message ul li span.spot {
+	float:left;
+}
+
+/* 客源分布 */
+.main .passenger-source {
+	float:left;
+	height:3.177083rem;
+	width:6.052083rem;
+	background:url('../img/passenger-source.png') no-repeat;
+	background-size:6.052083rem 3.177083rem ;
+}
+.main .passenger-source .passenger-source-wrap {
+	height:100%;
+	padding-top:0.260417rem;
+	box-sizing:border-box;
+
+}
+.main .passenger-source #passenger {
+	height:100%;
+	width:60%;
+	float:left;
+}
+.main .passenger-source .people {
+	width:40%;
+	float:right;
+	height:100%;
+	box-sizing:border-box;
+}
+.main .passenger-source .people h3 {
+	font-size:0.15625rem;
+	color:#a5b8e0;
+	text-align:right;
+	padding-right:0.208333rem;
+}
+.main .passenger-source .people ul {
+	font-size:0.135417rem;
+	color:#a5b8e0;
+	padding-right:0.208333rem;
+}
+.main .passenger-source .people ul li {
+	margin-top:0.208333rem;
+	text-align:right;
+}
+.main .passenger-source .people ul li>span.num {
+	border:1px solid #ffef9d;
+	display:inline-block;
+	height:0.177083rem;
+	line-height:0.177083rem;
+	text-align:right;
+	width:0.625rem;
+	box-sizing: border-box;
+	font-size:0.125rem;
+	margin-left:0.455208rem;
+	margin-right:0.15625rem;
+	color:#ffef9d;
+	padding-right:0.026042rem;
+}
+.main .passenger-wrap {
+	float:left;
+	width:3.494792rem;
+	margin-left:0.130208rem;
+	
+}
+/* 来源性分布 */
+.main .passenger-wrap .source {
+	height:1.041667rem;
+	width:3.494792rem;
+	background:url('../img/source.png') no-repeat;
+	background-size:3.494792rem 1.041667rem;
+}
+.main .passenger-wrap .source #source {
+	height:100%;
+	width:100%;
+	padding-top:0.260417rem;
+	box-sizing:border-box;
+}
+/* 年龄分布 */
+.main .passenger-wrap .age {
+	margin-top:0.15625rem;
+	height:1.979167rem;
+	width:3.494792rem;
+	background:url('../img/age.png') no-repeat;
+	background-size:3.494792rem 1.979167rem;
+}
+.main .passenger-wrap .age #age {
+	height:100%;
+	width:100%;
+	padding-top:0.260417rem;
+	box-sizing:border-box;
+}
+
+
+.swiper-container {
+	height:3.177083rem;
+
+}
+.swiper-slide {
+	height:3.177083rem;
+	width:100%;
+}

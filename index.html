@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+	
+    <title>计调通可视化平台</title>
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="js/plugins/numberAnimate.css">
+    <link rel="stylesheet" type="text/css" href="js/plugins/swiper/swiper-3.4.2.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/index.css"> 
+    
+</head>
+<body>
+
+<div class="header">
+	<div class="time">
+		<span id="time" class="date-time">2017.04.20</span>
+		<span id="week" >Sta</span>
+	</div>
+	
+	<h1>计调通数据分析及可视化平台</h1>
+	
+	<div class="setTime"></div>
+</div>
+
+<div class="main clearfix">
+	<div class="deal">
+		<span class="title">交易额</span>
+		<ul id="deal" >
+			
+		</ul>
+	</div>
+	<div class="water">
+		<span class="title">流水情况</span>
+		<ul>
+			<li id="total"></li>
+			<li id="month"></li>
+			<li id="day"></li>
+		</ul>
+	</div>
+	
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<div class="procurer">
+					<span class="title">采购商排名TOP10</span>
+					<div id="procurer"></div>
+				</div>
+				<div class="provider">
+					<span class="title">供应商排名TOP10</span>
+					<div id="provider"></div>
+				</div>
+				<div class="hot-spot">
+					<span class="title">景区热点分布</span>
+					<div class="hotSpot-wrap">
+						<div id="hotSpot"></div>
+						<div id="message" class="message">
+
+						</div>
+					</div>
+		
+				</div>
+			</div>
+			<div class="swiper-slide">
+				<div class="passenger-source">
+					<span class="title">客源分布</span>
+					<div class="passenger-source-wrap">
+						<div id="passenger"></div>
+						<div  class="people">
+
+							<h3>客源情况排名TOP6</h3>
+							<ul id="people"></ul>
+						</div>
+					</div>
+		
+				</div>
+				<div class="passenger-wrap">
+					<div class="source">
+						<span class="title">客户来源性别分布</span>
+						<div id=source></div>
+					</div>
+					<div class="age">
+						<span class="title">客户年龄层次</span>
+						<div id="age"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+</div>
+
+
+<!-- 交易额模板 -->
+<script id="dealTmpl" type="text/x-dot-template">
+	
+	<li>总交易额：<span id="totalV" class="money">{{=it.Totalturnover.Totalamount}}</span>元，同比<span id="Tper" class="percent">{{=(Math.abs(it.Totalturnover.An)*100).toFixed(0)+'%'}}</span><span class="tip {{? it.Totalturnover.An<0}}desc {{?}}"></span></li>
+	<li>月交易额：<span id="monthV" class="money">{{=it.Monthturnover.Totalamount}}</span>元，同比<span id="Mper" class="percent">{{=(Math.abs(it.Monthturnover.An)*100).toFixed(0)+'%'}}</span><span class="tip {{? it.Monthturnover.An<0}}desc {{?}}"></span></li>
+	<li>周交易额：<span id="weekV" class="money">{{=it.Weekturnover.Totalamount}}</span>元，同比<span id="Wper" class="percent">{{=(Math.abs(it.Weekturnover.An)*100).toFixed(0)+'%'}}</span><span class="tip {{? it.Weekturnover.An<0}}desc {{?}}"></span></li>
+	<li>日交易额：<span id="dayV" class="money">{{=it.Dayturnover.Totalamount}}</span>元，同比<span id="Dper" class="percent">{{=(Math.abs(it.Dayturnover.An)*100).toFixed(0)+'%'}}</span><span class="tip {{? it.Dayturnover.An<0}}desc {{?}}"></span></li>
+	
+</script>
+
+
+<!-- 景区热点模板 -->
+<script id="hotSpotTmpl" type="text/x-dot-template">
+
+	<h3>{{=it.title}}</h3>
+	<ul>
+	{{~it.arr:v:i}}
+		<li><span class="spot">{{=v.text}}：</span><span class="num">{{=v.value}}</span>人次</li>
+	{{~}}
+	</ul>	
+</script>
+
+<!-- 客源分布模板 -->
+<script id="peopleTmpl" type="text/x-dot-template">
+	
+	{{~it.arr:v:i}}
+	
+		<li><span class="spot">{{=v.title}}：</span><span class="num">{{=v.Total}}</span>万人次</li>
+	{{~}}
+	
+</script>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/plugins/numberAnimate.js"></script>
+<script src="js/plugins/swiper/swiper-3.4.2.jquery.min.js"></script>
+<script src="js/lib/doT.min.js"></script>
+<script src="js/echarts.min.js"></script>
+<script src="js/map/anhui.js"></script>
+<script src="js/map/huangshan.js"></script>
+<script src="js/map/china.js"></script>
+<script src="js/index.js"></script>
+
+
+
+</body>
+</html>
+
